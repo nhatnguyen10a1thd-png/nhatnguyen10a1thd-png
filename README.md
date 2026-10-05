@@ -282,28 +282,9 @@ I enjoy connecting software with the physical world:
 
 ### Architecture
 
-```text
-Sensors / ESP32
-       │
-       │ Telemetry
-       ▼
-      MQTT
-       │
-       ▼
- Node.js Backend
-       │
- ┌─────┼───────────────┐
- │     │               │
- ▼     ▼               ▼
- DB   Automation     AI Analyst
- │                     │
- └──────────┬──────────┘
-            │
-         Socket.io
-            │
-            ▼
-       React Dashboard
-```
+<p align="center">
+  <img src="./assets/smartfarm_architecture.svg" width="100%" alt="SmartFarm architecture" />
+</p>
 
 ### Engineering highlights
 
@@ -352,29 +333,9 @@ A video retrieval system that uses natural-language queries to search visual con
 
 ### Retrieval pipeline
 
-```text
-Natural Language Query
-        │
-        ▼
-Text Embedding
-        │
-        ▼
-     CLIP Space
-        │
-        ▼
-FAISS Vector Search
-        │
-        ▼
- Candidate Frames
-        │
-        ├── Multi-Prompt Fusion
-        ├── PRF / Rocchio
-        ├── MMR
-        └── OCR / Reranking
-        │
-        ▼
- Ranked Results
-```
+<p align="center">
+  <img src="./assets/aic2026_pipeline.svg" width="100%" alt="AIC2026 retrieval pipeline" />
+</p>
 
 ### Topics explored
 
@@ -417,24 +378,9 @@ A Java-based management application designed around realistic coffee-shop operat
 
 ### Architecture
 
-```text
-View
- │
- ▼
-Controller
- │
- ▼
-Service
- │
- ▼
-DAO
- │
- ▼
-JPA / Hibernate
- │
- ▼
-MySQL
-```
+<p align="center">
+  <img src="./assets/coffee_architecture.svg" width="100%" alt="Coffee management architecture" />
+</p>
 
 ### Main modules
 
