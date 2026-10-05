@@ -1,0 +1,177 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+  <title id="title">How I Think About End-to-End Systems</title>
+  <desc id="desc">A system flow from physical events and devices through transport, backend, data, intelligence, realtime delivery, and the web application.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d1117"/>
+      <stop offset="1" stop-color="#11161d"/>
+    </linearGradient>
+    <linearGradient id="rule" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#58a6ff"/>
+      <stop offset=".5" stop-color="#a371f7" stop-opacity=".65"/>
+      <stop offset="1" stop-color="#3fb950"/>
+    </linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#30363d" stroke-width="1" opacity=".14"/>
+    </pattern>
+    <marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3.5 L0,7 Z" fill="#6e7681"/>
+    </marker>
+    <style>
+      .ui { font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif; }
+      .mono { font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace; }
+      .title { font-size: 30px; font-weight: 700; fill: #f0f6fc; letter-spacing: -.35px; }
+      .subtitle { font-size: 14px; fill: #8b949e; }
+      .eyebrow { font-size: 11px; font-weight: 700; fill: #8b949e; letter-spacing: 1.35px; }
+      .cardTitle { font-size: 15px; font-weight: 700; fill: #f0f6fc; }
+      .cardSub { font-size: 10px; font-weight: 700; letter-spacing: 1px; }
+      .cardText { font-size: 12px; font-weight: 500; fill: #c9d1d9; }
+      .meta { font-size: 10.5px; fill: #6e7681; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="520" rx="24" fill="url(#bg)"/>
+  <rect x="1" y="1" width="1198" height="518" rx="23" fill="none" stroke="#30363d"/>
+  <rect x="24" y="112" width="1152" height="378" rx="18" fill="url(#grid)" opacity=".7"/>
+
+  <!-- header -->
+  <g class="ui">
+    <text x="48" y="52" class="title">How I Think About End-to-End Systems</text>
+    <text x="48" y="78" class="subtitle">Follow the signal: where it starts, how it moves, where it becomes useful.</text>
+    <rect x="997" y="37" width="155" height="30" rx="15" fill="#161b22" stroke="#30363d"/>
+    <circle cx="1017" cy="52" r="4" fill="#58a6ff">
+      <animate attributeName="opacity" values=".45;1;.45" dur="2.6s" repeatCount="indefinite"/>
+    </circle>
+    <text x="1029" y="56" class="eyebrow">SYSTEM FLOW</text>
+    <line x1="48" y1="98" x2="1152" y2="98" stroke="#21262d"/>
+    <line x1="48" y1="98" x2="286" y2="98" stroke="url(#rule)" stroke-width="2"/>
+  </g>
+
+  <!-- phase labels -->
+  <g class="mono">
+    <text x="56" y="135" class="eyebrow">PRIMARY PIPELINE</text>
+    <text x="1138" y="135" text-anchor="end" class="meta">event → signal → service → state → delivery</text>
+  </g>
+
+  <!-- cards top row -->
+  <g class="ui">
+    <g>
+      <rect x="48" y="154" width="150" height="118" rx="14" fill="#161b22" stroke="#30363d"/>
+      <rect x="48" y="154" width="4" height="118" rx="2" fill="#58a6ff"/>
+      <text x="68" y="180" class="mono eyebrow" fill="#58a6ff">01 / ORIGIN</text>
+      <text x="68" y="207" class="cardTitle">Physical World</text>
+      <text x="68" y="230" class="cardText">Events · states</text>
+      <text x="68" y="250" class="cardText">real-world changes</text>
+    </g>
+    <g>
+      <rect x="224" y="154" width="160" height="118" rx="14" fill="#161b22" stroke="#30363d"/>
+      <rect x="224" y="154" width="4" height="118" rx="2" fill="#3fb950"/>
+      <text x="244" y="180" class="mono eyebrow" fill="#3fb950">02 / DEVICE</text>
+      <text x="244" y="207" class="cardTitle">Sensors / ESP32</text>
+      <text x="244" y="230" class="cardText">Capture telemetry</text>
+      <text x="244" y="250" class="cardText">read + control</text>
+    </g>
+    <g>
+      <rect x="410" y="154" width="150" height="118" rx="14" fill="#161b22" stroke="#30363d"/>
+      <rect x="410" y="154" width="4" height="118" rx="2" fill="#d29922"/>
+      <text x="430" y="180" class="mono eyebrow" fill="#d29922">03 / TRANSPORT</text>
+      <text x="430" y="207" class="cardTitle">MQTT / HTTP</text>
+      <text x="430" y="230" class="cardText">Move information</text>
+      <text x="430" y="250" class="cardText">between boundaries</text>
+    </g>
+    <g>
+      <rect x="586" y="142" width="188" height="142" rx="15" fill="#161b22" stroke="#30363d"/>
+      <rect x="586" y="142" width="4" height="142" rx="2" fill="#58a6ff"/>
+      <text x="608" y="170" class="mono eyebrow" fill="#58a6ff">04 / ORCHESTRATION</text>
+      <text x="608" y="198" class="cardTitle">Backend Services</text>
+      <text x="608" y="224" class="cardText">validation + auth</text>
+      <text x="608" y="245" class="cardText">business rules + APIs</text>
+      <rect x="608" y="257" width="107" height="18" rx="9" fill="#0d1117" stroke="#30363d"/>
+      <text x="661.5" y="270" text-anchor="middle" class="mono meta">SYSTEM CORE</text>
+      <path d="M592 144 H767" fill="none" stroke="#58a6ff" stroke-width="1.1" stroke-dasharray="35 140">
+        <animate attributeName="stroke-dashoffset" from="0" to="-175" dur="4.4s" repeatCount="indefinite"/>
+      </path>
+    </g>
+    <g>
+      <rect x="800" y="154" width="150" height="118" rx="14" fill="#161b22" stroke="#30363d"/>
+      <rect x="800" y="154" width="4" height="118" rx="2" fill="#a371f7"/>
+      <text x="820" y="180" class="mono eyebrow" fill="#a371f7">05 / STATE</text>
+      <text x="820" y="207" class="cardTitle">Database</text>
+      <text x="820" y="230" class="cardText">Persist information</text>
+      <text x="820" y="250" class="cardText">history + state</text>
+    </g>
+    <g>
+      <rect x="976" y="154" width="176" height="118" rx="14" fill="#161b22" stroke="#30363d"/>
+      <rect x="976" y="154" width="4" height="118" rx="2" fill="#58a6ff"/>
+      <text x="996" y="180" class="mono eyebrow" fill="#58a6ff">06 / DELIVERY</text>
+      <text x="996" y="207" class="cardTitle">Realtime APIs</text>
+      <text x="996" y="230" class="cardText">Push live updates</text>
+      <text x="996" y="250" class="cardText">to clients</text>
+    </g>
+  </g>
+
+  <!-- primary connectors -->
+  <g fill="none" stroke="#484f58" stroke-width="1.7" marker-end="url(#arrow)">
+    <path d="M198 213H218"/>
+    <path d="M384 213H404"/>
+    <path d="M560 213H580"/>
+    <path d="M774 213H794"/>
+    <path d="M950 213H970"/>
+  </g>
+
+  <!-- animated packet traversing the primary pipeline -->
+  <circle r="4.5" fill="#58a6ff">
+    <animateMotion dur="8s" repeatCount="indefinite" path="M198 213H224H410H586H800H976"/>
+    <animate attributeName="opacity" values="0;1;1;1;0" dur="8s" repeatCount="indefinite"/>
+  </circle>
+  <circle r="3.5" fill="#3fb950">
+    <animateMotion dur="8s" begin="3.4s" repeatCount="indefinite" path="M198 213H224H410H586H800H976"/>
+    <animate attributeName="opacity" values="0;1;1;1;0" dur="8s" begin="3.4s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- secondary row -->
+  <g class="mono">
+    <text x="798" y="323" class="eyebrow">SECONDARY PATHS</text>
+  </g>
+
+  <g class="ui">
+    <g>
+      <rect x="782" y="340" width="190" height="112" rx="14" fill="#161b22" stroke="#30363d"/>
+      <rect x="782" y="340" width="4" height="112" rx="2" fill="#a371f7"/>
+      <text x="804" y="366" class="mono eyebrow" fill="#a371f7">07 / INTELLIGENCE</text>
+      <text x="804" y="393" class="cardTitle">Data Processing</text>
+      <text x="804" y="416" class="cardText">analysis · ranking</text>
+      <text x="804" y="436" class="cardText">models · insights</text>
+    </g>
+    <g>
+      <rect x="994" y="340" width="158" height="112" rx="14" fill="#161b22" stroke="#30363d"/>
+      <rect x="994" y="340" width="4" height="112" rx="2" fill="#3fb950"/>
+      <text x="1016" y="366" class="mono eyebrow" fill="#3fb950">08 / EXPERIENCE</text>
+      <text x="1016" y="393" class="cardTitle">Web App</text>
+      <text x="1016" y="416" class="cardText">interface + control</text>
+      <text x="1016" y="436" class="cardText">human feedback</text>
+    </g>
+  </g>
+
+  <!-- branch connectors -->
+  <g fill="none" stroke="#484f58" stroke-width="1.7" marker-end="url(#arrow)">
+    <path d="M875 272V334"/>
+    <path d="M1064 272V334"/>
+  </g>
+  <path d="M972 396H988" fill="none" stroke="#6e7681" stroke-width="1.4" stroke-dasharray="4 5" marker-end="url(#arrow)"/>
+  <text x="980" y="385" text-anchor="middle" class="mono meta">insights</text>
+
+  <circle r="4" fill="#a371f7">
+    <animateMotion dur="3.8s" repeatCount="indefinite" path="M875 272V340"/>
+    <animate attributeName="opacity" values="0;1;1;0" dur="3.8s" repeatCount="indefinite"/>
+  </circle>
+  <circle r="4" fill="#3fb950">
+    <animateMotion dur="3.8s" begin="1.6s" repeatCount="indefinite" path="M1064 272V340"/>
+    <animate attributeName="opacity" values="0;1;1;0" dur="3.8s" begin="1.6s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- footer -->
+  <line x1="48" y1="478" x2="1152" y2="478" stroke="#21262d"/>
+  <text x="48" y="500" class="mono meta">observe → transmit → validate → persist → interpret → deliver → interact</text>
+  <text x="1152" y="500" text-anchor="end" class="mono meta">failure-aware · measurable · evolvable</text>
+</svg>
