@@ -1,85 +1,132 @@
-<svg width="1200" height="400" viewBox="0 0 1200 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AIC2026 retrieval pipeline">
+<svg width="1200" height="420" viewBox="0 0 1200 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AIC 2026 multimodal video retrieval pipeline">
   <defs>
-    <linearGradient id="bg2" x1="0" y1="0" x2="1200" y2="400">
-      <stop offset="0%" stop-color="#0b1020"/>
-      <stop offset="100%" stop-color="#101828"/>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="420">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="100%" stop-color="#111827"/>
     </linearGradient>
-    <filter id="glow2">
-      <feGaussianBlur stdDeviation="4" result="blur"/>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2.2" result="blur"/>
       <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#58a6ff"/>
+    </marker>
+    <marker id="arrowPurple" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#a371f7"/>
+    </marker>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#3fb950"/>
+    </marker>
     <style>
-      .title { font: 800 30px 'Segoe UI', Inter, Arial, sans-serif; fill: #e5eef8; }
-      .subtitle { font: 500 14px 'Segoe UI', Inter, Arial, sans-serif; fill: #93a4b8; }
-      .node-title { font: 800 19px 'Segoe UI', Inter, Arial, sans-serif; }
-      .node-sub { font: 600 13px 'Segoe UI', Inter, Arial, sans-serif; fill: #cbd5e1; }
-      .cap { font: 700 12px 'Segoe UI', Inter, Arial, sans-serif; fill: #dbeafe; }
-      .lineA { stroke: #38bdf8; stroke-width: 3.5; fill: none; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 9 9; }
-      .lineB { stroke: #a78bfa; stroke-width: 3.5; fill: none; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 9 9; }
-      .lineC { stroke: #4ade80; stroke-width: 3.5; fill: none; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 9 9; }
-      .small { font: 700 11px 'Segoe UI', Inter, Arial, sans-serif; fill: #a5b4c7; }
+      .title{font:700 28px Inter,'Segoe UI',Arial,sans-serif;fill:#f0f6fc;letter-spacing:.2px}
+      .subtitle{font:500 14px Inter,'Segoe UI',Arial,sans-serif;fill:#8b949e}
+      .eyebrow{font:700 10px Inter,'Segoe UI',Arial,sans-serif;fill:#8b949e;letter-spacing:1.5px}
+      .nodeTitle{font:700 18px Inter,'Segoe UI',Arial,sans-serif;fill:#f0f6fc}
+      .nodeSub{font:500 13px Inter,'Segoe UI',Arial,sans-serif;fill:#b1bac4}
+      .chip{font:700 11px Inter,'Segoe UI',Arial,sans-serif;fill:#c9d1d9}
+      .edgeLabel{font:700 10px Inter,'Segoe UI',Arial,sans-serif;letter-spacing:1.15px}
+      .footer{font:600 11px Inter,'Segoe UI',Arial,sans-serif;fill:#6e7681;letter-spacing:.55px}
+      .line{fill:none;stroke-width:2.2;stroke-linecap:round;stroke-dasharray:7 8}
     </style>
   </defs>
-  <rect width="1200" height="400" rx="28" fill="url(#bg2)"/>
-  <text x="48" y="50" class="title">🎥 AIC 2026 — Multimodal Video Retrieval Pipeline</text>
-  <text x="48" y="76" class="subtitle">Natural-language query to vector retrieval, reranking, and ranked frame results</text>
 
-  <g filter="url(#glow2)">
-    <rect x="54" y="145" width="150" height="90" rx="20" fill="#1e1b4b" stroke="#a78bfa" stroke-width="2.2"/>
-    <text x="129" y="180" text-anchor="middle" class="node-title" fill="#e9ddff">💬 Query</text>
-    <text x="129" y="203" text-anchor="middle" class="node-sub">Natural Language</text>
+  <rect x="1" y="1" width="1198" height="418" rx="24" fill="url(#bg)" stroke="#30363d"/>
+  <text x="46" y="46" class="title">AIC 2026 — Multimodal Video Retrieval Pipeline</text>
+  <text x="46" y="72" class="subtitle">Natural-language query → embedding → vector retrieval → refinement → ranked frames</text>
 
-    <rect x="265" y="145" width="180" height="90" rx="20" fill="#0f2541" stroke="#38bdf8" stroke-width="2.2"/>
-    <text x="355" y="180" text-anchor="middle" class="node-title" fill="#d6f0ff">🔤 Text Encoder</text>
-    <text x="355" y="203" text-anchor="middle" class="node-sub">CLIP / OpenCLIP</text>
+  <!-- subtle guide rail -->
+  <line x1="54" y1="210" x2="1152" y2="210" stroke="#21262d" stroke-width="1"/>
 
-    <rect x="512" y="130" width="200" height="120" rx="24" fill="#0b2b1e" stroke="#4ade80" stroke-width="2.2"/>
-    <text x="612" y="173" text-anchor="middle" class="node-title" fill="#caf7db">🔎 Vector Search</text>
-    <text x="612" y="198" text-anchor="middle" class="node-sub">FAISS Index</text>
-    <text x="612" y="217" text-anchor="middle" class="node-sub">Candidate Frames / Shots</text>
-
-    <rect x="775" y="102" width="255" height="175" rx="24" fill="#25163a" stroke="#c084fc" stroke-width="2.2"/>
-    <text x="902.5" y="138" text-anchor="middle" class="node-title" fill="#ebdcff">🧠 Retrieval Refinement</text>
-    <text x="902.5" y="166" text-anchor="middle" class="node-sub">RRF · PRF · Rocchio</text>
-    <text x="902.5" y="186" text-anchor="middle" class="node-sub">MMR · OCR · Reranking</text>
-    <text x="902.5" y="206" text-anchor="middle" class="node-sub">Multilingual &amp; Prompt Fusion</text>
-
-    <g>
-      <rect x="810" y="222" width="70" height="28" rx="14" fill="#1b2340" stroke="#60a5fa"/>
-      <text x="845" y="240" text-anchor="middle" class="cap">RRF</text>
-      <rect x="890" y="222" width="70" height="28" rx="14" fill="#1b2340" stroke="#60a5fa"/>
-      <text x="925" y="240" text-anchor="middle" class="cap">PRF</text>
-      <rect x="970" y="222" width="70" height="28" rx="14" fill="#1b2340" stroke="#60a5fa"/>
-      <text x="1005" y="240" text-anchor="middle" class="cap">OCR</text>
-    </g>
-
-    <rect x="1070" y="145" width="90" height="90" rx="20" fill="#082f49" stroke="#22d3ee" stroke-width="2.2"/>
-    <text x="1115" y="180" text-anchor="middle" class="node-title" fill="#d7fbff">🏁</text>
-    <text x="1115" y="203" text-anchor="middle" class="node-sub">Ranked Results</text>
+  <!-- QUERY -->
+  <g>
+    <rect x="50" y="158" width="145" height="104" rx="16" fill="#161b22" stroke="#6e40c9" stroke-width="1.5"/>
+    <text x="68" y="181" class="eyebrow">INPUT</text>
+    <text x="122.5" y="214" text-anchor="middle" class="nodeTitle">Query</text>
+    <text x="122.5" y="238" text-anchor="middle" class="nodeSub">Natural language</text>
+    <circle cx="181" cy="174" r="4" fill="#a371f7">
+      <animate attributeName="opacity" values=".35;1;.35" dur="2.4s" repeatCount="indefinite"/>
+    </circle>
   </g>
 
-  <path d="M204 190 H265" class="lineB"/>
-  <path d="M445 190 H512" class="lineA"/>
-  <path d="M712 190 H775" class="lineC"/>
-  <path d="M1030 190 H1070" class="lineA"/>
+  <!-- TEXT ENCODER -->
+  <g>
+    <rect x="245" y="158" width="175" height="104" rx="16" fill="#161b22" stroke="#1f6feb" stroke-width="1.5"/>
+    <text x="263" y="181" class="eyebrow">ENCODING</text>
+    <text x="332.5" y="214" text-anchor="middle" class="nodeTitle">Text Encoder</text>
+    <text x="332.5" y="238" text-anchor="middle" class="nodeSub">CLIP / OpenCLIP</text>
+  </g>
 
-  <rect x="466" y="147" width="70" height="28" rx="14" fill="#112336" stroke="#38bdf8"/>
-  <text x="501" y="165" text-anchor="middle" class="cap">Embed</text>
+  <!-- VECTOR SEARCH -->
+  <g>
+    <rect x="475" y="146" width="195" height="128" rx="18" fill="#161b22" stroke="#238636" stroke-width="1.5"/>
+    <text x="493" y="169" class="eyebrow">RETRIEVAL</text>
+    <text x="572.5" y="204" text-anchor="middle" class="nodeTitle">Vector Search</text>
+    <text x="572.5" y="228" text-anchor="middle" class="nodeSub">FAISS index</text>
+    <text x="572.5" y="249" text-anchor="middle" class="nodeSub">Candidate frames / shots</text>
+  </g>
 
-  <rect x="721" y="147" width="72" height="28" rx="14" fill="#112336" stroke="#4ade80"/>
-  <text x="757" y="165" text-anchor="middle" class="cap">Search</text>
+  <!-- RETRIEVAL REFINEMENT -->
+  <g>
+    <rect x="730" y="124" width="260" height="172" rx="18" fill="#161b22" stroke="#8957e5" stroke-width="1.5"/>
+    <text x="748" y="147" class="eyebrow">REFINEMENT</text>
+    <text x="860" y="180" text-anchor="middle" class="nodeTitle">Retrieval Refinement</text>
+    <text x="860" y="205" text-anchor="middle" class="nodeSub">RRF · PRF · Rocchio · MMR</text>
+    <text x="860" y="227" text-anchor="middle" class="nodeSub">OCR · reranking · prompt fusion</text>
+    <text x="860" y="249" text-anchor="middle" class="nodeSub">Multilingual query support</text>
 
-  <rect x="1044" y="147" width="82" height="28" rx="14" fill="#112336" stroke="#38bdf8"/>
-  <text x="1085" y="165" text-anchor="middle" class="cap">Rank</text>
+    <rect x="763" y="264" width="54" height="24" rx="12" fill="#21262d" stroke="#30363d"/>
+    <text x="790" y="280" text-anchor="middle" class="chip">RRF</text>
+    <rect x="828" y="264" width="54" height="24" rx="12" fill="#21262d" stroke="#30363d"/>
+    <text x="855" y="280" text-anchor="middle" class="chip">PRF</text>
+    <rect x="893" y="264" width="64" height="24" rx="12" fill="#21262d" stroke="#30363d"/>
+    <text x="925" y="280" text-anchor="middle" class="chip">OCR</text>
+  </g>
 
-  <circle r="6" fill="#a78bfa" filter="url(#glow2)">
-    <animateMotion dur="3.4s" repeatCount="indefinite" path="M204 190 H265 H512"/>
-    <animate attributeName="opacity" values="0;1;1;0" dur="3.4s" repeatCount="indefinite"/>
+  <!-- RESULTS -->
+  <g>
+    <rect x="1040" y="158" width="120" height="104" rx="16" fill="#161b22" stroke="#39c5cf" stroke-width="1.5"/>
+    <text x="1058" y="181" class="eyebrow">OUTPUT</text>
+    <text x="1100" y="214" text-anchor="middle" class="nodeTitle">Ranked</text>
+    <text x="1100" y="237" text-anchor="middle" class="nodeTitle">Results</text>
+  </g>
+
+  <!-- connectors; labels deliberately above open gaps -->
+  <path d="M195 210 H245" class="line" stroke="#a371f7" marker-end="url(#arrowPurple)"/>
+  <text x="220" y="137" text-anchor="middle" class="edgeLabel" fill="#a371f7">QUERY</text>
+
+  <path d="M420 210 H475" class="line" stroke="#58a6ff" marker-end="url(#arrowBlue)"/>
+  <text x="447.5" y="137" text-anchor="middle" class="edgeLabel" fill="#58a6ff">EMBED</text>
+
+  <path d="M670 210 H730" class="line" stroke="#3fb950" marker-end="url(#arrowGreen)"/>
+  <text x="700" y="137" text-anchor="middle" class="edgeLabel" fill="#3fb950">SEARCH</text>
+
+  <path d="M990 210 H1040" class="line" stroke="#58a6ff" marker-end="url(#arrowBlue)"/>
+  <text x="1015" y="137" text-anchor="middle" class="edgeLabel" fill="#58a6ff">RANK</text>
+
+  <!-- animated packets stay strictly inside connector gaps -->
+  <circle r="4.5" fill="#a371f7" filter="url(#softGlow)">
+    <animateMotion dur="2.2s" repeatCount="indefinite" path="M200 210 H240"/>
+    <animate attributeName="opacity" values="0;1;1;0" dur="2.2s" repeatCount="indefinite"/>
   </circle>
-  <circle r="6" fill="#4ade80" filter="url(#glow2)">
-    <animateMotion dur="3.8s" begin=".7s" repeatCount="indefinite" path="M712 190 H775 H1070"/>
-    <animate attributeName="opacity" values="0;1;1;0" dur="3.8s" repeatCount="indefinite"/>
+  <circle r="4.5" fill="#58a6ff" filter="url(#softGlow)">
+    <animateMotion dur="2.5s" begin=".35s" repeatCount="indefinite" path="M425 210 H470"/>
+    <animate attributeName="opacity" values="0;1;1;0" dur="2.5s" begin=".35s" repeatCount="indefinite"/>
+  </circle>
+  <circle r="4.5" fill="#3fb950" filter="url(#softGlow)">
+    <animateMotion dur="2.6s" begin=".7s" repeatCount="indefinite" path="M675 210 H725"/>
+    <animate attributeName="opacity" values="0;1;1;0" dur="2.6s" begin=".7s" repeatCount="indefinite"/>
+  </circle>
+  <circle r="4.5" fill="#58a6ff" filter="url(#softGlow)">
+    <animateMotion dur="2.3s" begin="1s" repeatCount="indefinite" path="M995 210 H1035"/>
+    <animate attributeName="opacity" values="0;1;1;0" dur="2.3s" begin="1s" repeatCount="indefinite"/>
   </circle>
 
-  <text x="48" y="372" class="small">Use this to replace the plain text retrieval flow in your profile or in the AIC2026 repository README.</text>
+  <!-- tiny activity scan inside refinement, never over text -->
+  <rect x="747" y="289" width="225" height="2" rx="1" fill="#30363d"/>
+  <rect x="747" y="289" width="52" height="2" rx="1" fill="#a371f7" opacity=".85">
+    <animate attributeName="x" values="747;920;747" dur="4.8s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values=".25;.9;.25" dur="4.8s" repeatCount="indefinite"/>
+  </rect>
+
+  <text x="46" y="385" class="footer">AIC2026 · CLIP / OpenCLIP · FAISS · RRF · PRF · Rocchio · MMR · OCR</text>
 </svg>
