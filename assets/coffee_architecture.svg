@@ -1,0 +1,63 @@
+<svg width="1200" height="360" viewBox="0 0 1200 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Coffee Management architecture">
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="1200" y2="360">
+      <stop offset="0%" stop-color="#0c111d"/>
+      <stop offset="100%" stop-color="#151922"/>
+    </linearGradient>
+    <filter id="glow3">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <style>
+      .title { font: 800 30px 'Segoe UI', Inter, Arial, sans-serif; fill: #e5eef8; }
+      .subtitle { font: 500 14px 'Segoe UI', Inter, Arial, sans-serif; fill: #93a4b8; }
+      .node-title { font: 800 18px 'Segoe UI', Inter, Arial, sans-serif; }
+      .node-sub { font: 600 13px 'Segoe UI', Inter, Arial, sans-serif; fill: #d1d5db; }
+      .line { stroke: #f59e0b; stroke-width: 3.5; fill: none; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 8 9; }
+      .cap { font: 700 12px 'Segoe UI', Inter, Arial, sans-serif; fill: #ffedd5; }
+      .small { font: 700 11px 'Segoe UI', Inter, Arial, sans-serif; fill: #a5b4c7; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="360" rx="28" fill="url(#bg3)"/>
+  <text x="48" y="50" class="title">☕ Coffee Shop Management — Layered Application Architecture</text>
+  <text x="48" y="76" class="subtitle">A business-oriented Java desktop application organized around clear responsibilities and data flow</text>
+
+  <g filter="url(#glow3)">
+    <rect x="70" y="150" width="150" height="85" rx="20" fill="#3b1d0a" stroke="#f59e0b" stroke-width="2.2"/>
+    <text x="145" y="183" text-anchor="middle" class="node-title" fill="#fde7c2">🖼️ View</text>
+    <text x="145" y="206" text-anchor="middle" class="node-sub">Java Swing UI</text>
+
+    <rect x="280" y="150" width="165" height="85" rx="20" fill="#2a1b0b" stroke="#fb923c" stroke-width="2.2"/>
+    <text x="362.5" y="183" text-anchor="middle" class="node-title" fill="#ffe1cc">🎮 Controller</text>
+    <text x="362.5" y="206" text-anchor="middle" class="node-sub">Input Handling</text>
+
+    <rect x="510" y="135" width="205" height="115" rx="24" fill="#2c1708" stroke="#f97316" stroke-width="2.2"/>
+    <text x="612.5" y="176" text-anchor="middle" class="node-title" fill="#ffd7c2">⚙️ Service Layer</text>
+    <text x="612.5" y="201" text-anchor="middle" class="node-sub">Business Logic · Validation</text>
+    <text x="612.5" y="220" text-anchor="middle" class="node-sub">Workflow Coordination</text>
+
+    <rect x="782" y="150" width="150" height="85" rx="20" fill="#2a1b0b" stroke="#fb923c" stroke-width="2.2"/>
+    <text x="857" y="183" text-anchor="middle" class="node-title" fill="#ffe1cc">📦 DAO</text>
+    <text x="857" y="206" text-anchor="middle" class="node-sub">Data Access</text>
+
+    <rect x="992" y="150" width="150" height="85" rx="20" fill="#3b1d0a" stroke="#f59e0b" stroke-width="2.2"/>
+    <text x="1067" y="183" text-anchor="middle" class="node-title" fill="#fde7c2">🗄️ Persistence</text>
+    <text x="1067" y="206" text-anchor="middle" class="node-sub">JPA / Hibernate / MySQL</text>
+  </g>
+
+  <path d="M220 192 H280" class="line"/>
+  <path d="M445 192 H510" class="line"/>
+  <path d="M715 192 H782" class="line"/>
+  <path d="M932 192 H992" class="line"/>
+
+  <circle r="6" fill="#fdba74" filter="url(#glow3)">
+    <animateMotion dur="4.5s" repeatCount="indefinite" path="M220 192 H280 H510 H782 H992"/>
+    <animate attributeName="opacity" values="0;1;1;1;0" dur="4.5s" repeatCount="indefinite"/>
+  </circle>
+
+  <rect x="548" y="82" width="130" height="30" rx="15" fill="#3b1d0a" stroke="#f59e0b"/>
+  <text x="613" y="101" text-anchor="middle" class="cap">Business Rules</text>
+
+  <text x="72" y="304" class="small">Typical flow: UI interaction → controller orchestration → service business rules → DAO → ORM / database.</text>
+</svg>

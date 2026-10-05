@@ -1,0 +1,85 @@
+<svg width="1200" height="400" viewBox="0 0 1200 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AIC2026 retrieval pipeline">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1200" y2="400">
+      <stop offset="0%" stop-color="#0b1020"/>
+      <stop offset="100%" stop-color="#101828"/>
+    </linearGradient>
+    <filter id="glow2">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <style>
+      .title { font: 800 30px 'Segoe UI', Inter, Arial, sans-serif; fill: #e5eef8; }
+      .subtitle { font: 500 14px 'Segoe UI', Inter, Arial, sans-serif; fill: #93a4b8; }
+      .node-title { font: 800 19px 'Segoe UI', Inter, Arial, sans-serif; }
+      .node-sub { font: 600 13px 'Segoe UI', Inter, Arial, sans-serif; fill: #cbd5e1; }
+      .cap { font: 700 12px 'Segoe UI', Inter, Arial, sans-serif; fill: #dbeafe; }
+      .lineA { stroke: #38bdf8; stroke-width: 3.5; fill: none; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 9 9; }
+      .lineB { stroke: #a78bfa; stroke-width: 3.5; fill: none; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 9 9; }
+      .lineC { stroke: #4ade80; stroke-width: 3.5; fill: none; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 9 9; }
+      .small { font: 700 11px 'Segoe UI', Inter, Arial, sans-serif; fill: #a5b4c7; }
+    </style>
+  </defs>
+  <rect width="1200" height="400" rx="28" fill="url(#bg2)"/>
+  <text x="48" y="50" class="title">🎥 AIC 2026 — Multimodal Video Retrieval Pipeline</text>
+  <text x="48" y="76" class="subtitle">Natural-language query to vector retrieval, reranking, and ranked frame results</text>
+
+  <g filter="url(#glow2)">
+    <rect x="54" y="145" width="150" height="90" rx="20" fill="#1e1b4b" stroke="#a78bfa" stroke-width="2.2"/>
+    <text x="129" y="180" text-anchor="middle" class="node-title" fill="#e9ddff">💬 Query</text>
+    <text x="129" y="203" text-anchor="middle" class="node-sub">Natural Language</text>
+
+    <rect x="265" y="145" width="180" height="90" rx="20" fill="#0f2541" stroke="#38bdf8" stroke-width="2.2"/>
+    <text x="355" y="180" text-anchor="middle" class="node-title" fill="#d6f0ff">🔤 Text Encoder</text>
+    <text x="355" y="203" text-anchor="middle" class="node-sub">CLIP / OpenCLIP</text>
+
+    <rect x="512" y="130" width="200" height="120" rx="24" fill="#0b2b1e" stroke="#4ade80" stroke-width="2.2"/>
+    <text x="612" y="173" text-anchor="middle" class="node-title" fill="#caf7db">🔎 Vector Search</text>
+    <text x="612" y="198" text-anchor="middle" class="node-sub">FAISS Index</text>
+    <text x="612" y="217" text-anchor="middle" class="node-sub">Candidate Frames / Shots</text>
+
+    <rect x="775" y="102" width="255" height="175" rx="24" fill="#25163a" stroke="#c084fc" stroke-width="2.2"/>
+    <text x="902.5" y="138" text-anchor="middle" class="node-title" fill="#ebdcff">🧠 Retrieval Refinement</text>
+    <text x="902.5" y="166" text-anchor="middle" class="node-sub">RRF · PRF · Rocchio</text>
+    <text x="902.5" y="186" text-anchor="middle" class="node-sub">MMR · OCR · Reranking</text>
+    <text x="902.5" y="206" text-anchor="middle" class="node-sub">Multilingual &amp; Prompt Fusion</text>
+
+    <g>
+      <rect x="810" y="222" width="70" height="28" rx="14" fill="#1b2340" stroke="#60a5fa"/>
+      <text x="845" y="240" text-anchor="middle" class="cap">RRF</text>
+      <rect x="890" y="222" width="70" height="28" rx="14" fill="#1b2340" stroke="#60a5fa"/>
+      <text x="925" y="240" text-anchor="middle" class="cap">PRF</text>
+      <rect x="970" y="222" width="70" height="28" rx="14" fill="#1b2340" stroke="#60a5fa"/>
+      <text x="1005" y="240" text-anchor="middle" class="cap">OCR</text>
+    </g>
+
+    <rect x="1070" y="145" width="90" height="90" rx="20" fill="#082f49" stroke="#22d3ee" stroke-width="2.2"/>
+    <text x="1115" y="180" text-anchor="middle" class="node-title" fill="#d7fbff">🏁</text>
+    <text x="1115" y="203" text-anchor="middle" class="node-sub">Ranked Results</text>
+  </g>
+
+  <path d="M204 190 H265" class="lineB"/>
+  <path d="M445 190 H512" class="lineA"/>
+  <path d="M712 190 H775" class="lineC"/>
+  <path d="M1030 190 H1070" class="lineA"/>
+
+  <rect x="466" y="147" width="70" height="28" rx="14" fill="#112336" stroke="#38bdf8"/>
+  <text x="501" y="165" text-anchor="middle" class="cap">Embed</text>
+
+  <rect x="721" y="147" width="72" height="28" rx="14" fill="#112336" stroke="#4ade80"/>
+  <text x="757" y="165" text-anchor="middle" class="cap">Search</text>
+
+  <rect x="1044" y="147" width="82" height="28" rx="14" fill="#112336" stroke="#38bdf8"/>
+  <text x="1085" y="165" text-anchor="middle" class="cap">Rank</text>
+
+  <circle r="6" fill="#a78bfa" filter="url(#glow2)">
+    <animateMotion dur="3.4s" repeatCount="indefinite" path="M204 190 H265 H512"/>
+    <animate attributeName="opacity" values="0;1;1;0" dur="3.4s" repeatCount="indefinite"/>
+  </circle>
+  <circle r="6" fill="#4ade80" filter="url(#glow2)">
+    <animateMotion dur="3.8s" begin=".7s" repeatCount="indefinite" path="M712 190 H775 H1070"/>
+    <animate attributeName="opacity" values="0;1;1;0" dur="3.8s" repeatCount="indefinite"/>
+  </circle>
+
+  <text x="48" y="372" class="small">Use this to replace the plain text retrieval flow in your profile or in the AIC2026 repository README.</text>
+</svg>

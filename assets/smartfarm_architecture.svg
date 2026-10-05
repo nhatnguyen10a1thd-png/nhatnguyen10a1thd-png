@@ -1,0 +1,134 @@
+<svg width="1200" height="420" viewBox="0 0 1200 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="SmartFarm architecture">
+  <defs>
+    <linearGradient id="bg1" x1="0" y1="0" x2="1200" y2="420">
+      <stop offset="0%" stop-color="#0b1020"/>
+      <stop offset="55%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <style>
+      .title { font: 800 30px 'Segoe UI', Inter, Arial, sans-serif; fill: #e5eef8; }
+      .subtitle { font: 500 14px 'Segoe UI', Inter, Arial, sans-serif; fill: #93a4b8; }
+      .node-title { font: 800 19px 'Segoe UI', Inter, Arial, sans-serif; }
+      .node-sub { font: 600 13px 'Segoe UI', Inter, Arial, sans-serif; fill: #cbd5e1; }
+      .cap { font: 700 12px 'Segoe UI', Inter, Arial, sans-serif; fill: #dbeafe; letter-spacing: .3px; }
+      .small { font: 700 11px 'Segoe UI', Inter, Arial, sans-serif; fill: #a5b4c7; }
+      .line { stroke: #7dd3fc; stroke-width: 3.5; fill: none; stroke-linecap: round; stroke-linejoin: round; opacity: .95; }
+      .line2 { stroke: #a78bfa; stroke-width: 3.5; fill: none; stroke-linecap: round; stroke-linejoin: round; opacity: .95; }
+      .line3 { stroke: #4ade80; stroke-width: 3.5; fill: none; stroke-linecap: round; stroke-linejoin: round; opacity: .95; }
+      .dashed { stroke-dasharray: 8 10; }
+      .pulse { transform-origin: center; animation: pulse 2.8s infinite ease-in-out; }
+      @keyframes pulse { 0%,100% { opacity: .82; } 50% { opacity: 1; } }
+    </style>
+  </defs>
+
+  <rect width="1200" height="420" rx="28" fill="url(#bg1)"/>
+  <text x="48" y="50" class="title">🌾 SmartFarm IoT &amp; AI Architecture</text>
+  <text x="48" y="76" class="subtitle">ESP32 telemetry, MQTT messaging, backend orchestration, automation, AI analysis, and realtime dashboard updates</text>
+
+  <!-- Nodes -->
+  <g filter="url(#glow)">
+    <rect x="56" y="126" width="190" height="86" rx="22" fill="#24163a" stroke="#a78bfa" stroke-width="2.2"/>
+    <text x="151" y="157" text-anchor="middle" class="node-title" fill="#dccdff">🌱 ESP32 + Sensors</text>
+    <text x="151" y="183" text-anchor="middle" class="node-sub">Temperature · Humidity · Gas</text>
+    <text x="151" y="201" text-anchor="middle" class="node-sub">Water Level · Fire · Soil</text>
+
+    <rect x="316" y="126" width="180" height="86" rx="22" fill="#0a2238" stroke="#38bdf8" stroke-width="2.2"/>
+    <text x="406" y="157" text-anchor="middle" class="node-title" fill="#b9e7ff">📡 MQTT Broker</text>
+    <text x="406" y="183" text-anchor="middle" class="node-sub">HiveMQ / Topics</text>
+    <text x="406" y="201" text-anchor="middle" class="node-sub">Telemetry · Commands · ACK</text>
+
+    <rect x="566" y="112" width="220" height="110" rx="24" fill="#0b2b1e" stroke="#4ade80" stroke-width="2.3"/>
+    <text x="676" y="149" text-anchor="middle" class="node-title" fill="#b6f5d1">⚙️ Backend Services</text>
+    <text x="676" y="175" text-anchor="middle" class="node-sub">Node.js · Express · JWT</text>
+    <text x="676" y="194" text-anchor="middle" class="node-sub">Device Control · Validation</text>
+    <text x="676" y="213" text-anchor="middle" class="node-sub">Command Timeout · Logging</text>
+
+    <rect x="486" y="278" width="160" height="88" rx="20" fill="#15243d" stroke="#60a5fa" stroke-width="2.1"/>
+    <text x="566" y="312" text-anchor="middle" class="node-title" fill="#d5e7ff">🗄️ Database</text>
+    <text x="566" y="336" text-anchor="middle" class="node-sub">Supabase</text>
+    <text x="566" y="354" text-anchor="middle" class="node-sub">Sensor Data · Logs</text>
+
+    <rect x="670" y="278" width="170" height="88" rx="20" fill="#0f2c22" stroke="#4ade80" stroke-width="2.1"/>
+    <text x="755" y="312" text-anchor="middle" class="node-title" fill="#c8f8da">⚡ Automation</text>
+    <text x="755" y="336" text-anchor="middle" class="node-sub">Threshold Rules</text>
+    <text x="755" y="354" text-anchor="middle" class="node-sub">Auto Control Logic</text>
+
+    <rect x="864" y="278" width="170" height="88" rx="20" fill="#24163a" stroke="#c084fc" stroke-width="2.1"/>
+    <text x="949" y="312" text-anchor="middle" class="node-title" fill="#ead7ff">🧠 AI Analyst</text>
+    <text x="949" y="336" text-anchor="middle" class="node-sub">Groq / Insights</text>
+    <text x="949" y="354" text-anchor="middle" class="node-sub">Daily Recommendations</text>
+
+    <rect x="938" y="112" width="190" height="110" rx="24" fill="#082f49" stroke="#22d3ee" stroke-width="2.3"/>
+    <text x="1033" y="149" text-anchor="middle" class="node-title" fill="#c6f7ff">🖥️ React Dashboard</text>
+    <text x="1033" y="175" text-anchor="middle" class="node-sub">Realtime Monitoring</text>
+    <text x="1033" y="194" text-anchor="middle" class="node-sub">Charts · Alerts · Control UI</text>
+    <text x="1033" y="213" text-anchor="middle" class="node-sub">Socket.io Updates</text>
+  </g>
+
+  <!-- Flow lines -->
+  <path d="M246 169 H316" class="line dashed"/>
+  <path d="M496 169 H566" class="line dashed"/>
+  <path d="M786 169 H938" class="line3 dashed"/>
+  <path d="M676 222 V256" class="line3 dashed"/>
+  <path d="M676 256 H566 V278" class="line dashed"/>
+  <path d="M676 256 H755 V278" class="line3 dashed"/>
+  <path d="M676 256 H949 V278" class="line2 dashed"/>
+
+  <!-- Control return path -->
+  <path d="M938 198 H884 H826 H786" class="line3" opacity=".0"/>
+  <path d="M938 198 H884 H826 H786 H406 H151" class="line2 dashed" opacity=".5"/>
+
+  <!-- Labels -->
+  <rect x="258" y="145" width="88" height="28" rx="14" fill="#12263a" stroke="#38bdf8" />
+  <text x="302" y="163" text-anchor="middle" class="cap">Telemetry</text>
+
+  <rect x="515" y="145" width="72" height="28" rx="14" fill="#0f2f24" stroke="#4ade80" />
+  <text x="551" y="163" text-anchor="middle" class="cap">Ingest</text>
+
+  <rect x="824" y="145" width="90" height="28" rx="14" fill="#0f2f24" stroke="#4ade80" />
+  <text x="869" y="163" text-anchor="middle" class="cap">Realtime</text>
+
+  <rect x="312" y="76" width="150" height="28" rx="14" fill="#23183a" stroke="#a78bfa"/>
+  <text x="387" y="94" text-anchor="middle" class="cap">Control Path →</text>
+
+  <!-- Animated packets -->
+  <circle r="6" fill="#7dd3fc" filter="url(#glow)">
+    <animateMotion dur="3.6s" repeatCount="indefinite" path="M246 169 H316 H566"/>
+    <animate attributeName="opacity" values="0;1;1;0" dur="3.6s" repeatCount="indefinite"/>
+  </circle>
+
+  <circle r="6" fill="#4ade80" filter="url(#glow)">
+    <animateMotion dur="4s" repeatCount="indefinite" path="M786 169 H938"/>
+    <animate attributeName="opacity" values="0;1;1;0" dur="4s" repeatCount="indefinite"/>
+  </circle>
+
+  <circle r="6" fill="#60a5fa" filter="url(#glow)">
+    <animateMotion dur="4.3s" repeatCount="indefinite" path="M676 222 V256 H566 V278"/>
+    <animate attributeName="opacity" values="0;1;1;0" dur="4.3s" repeatCount="indefinite"/>
+  </circle>
+
+  <circle r="6" fill="#4ade80" filter="url(#glow)">
+    <animateMotion dur="4.3s" begin=".8s" repeatCount="indefinite" path="M676 222 V256 H755 V278"/>
+    <animate attributeName="opacity" values="0;1;1;0" dur="4.3s" repeatCount="indefinite"/>
+  </circle>
+
+  <circle r="6" fill="#c084fc" filter="url(#glow)">
+    <animateMotion dur="4.3s" begin="1.4s" repeatCount="indefinite" path="M676 222 V256 H949 V278"/>
+    <animate attributeName="opacity" values="0;1;1;0" dur="4.3s" repeatCount="indefinite"/>
+  </circle>
+
+  <circle r="6" fill="#a78bfa" filter="url(#glow)">
+    <animateMotion dur="5.2s" repeatCount="indefinite" path="M938 198 H884 H826 H786 H406 H151"/>
+    <animate attributeName="opacity" values="0;0;1;1;0" dur="5.2s" repeatCount="indefinite"/>
+  </circle>
+
+  <text x="952" y="246" class="small">Dashboard updates + operator actions</text>
+  <text x="48" y="395" class="small">Design note: use this SVG in your README instead of plain ASCII diagrams for a more polished portfolio look.</text>
+</svg>
