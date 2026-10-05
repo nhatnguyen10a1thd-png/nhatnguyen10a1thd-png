@@ -36,32 +36,9 @@ I'm a third-year **Information Technology student at HCMUTE**, currently explori
 
 Rather than limiting myself to one layer of technology, I enjoy understanding how complete systems work:
 
-```text
-Physical World
-     │
-     ▼
-Sensors / ESP32
-     │
-     ▼
-MQTT / HTTP
-     │
-     ▼
-Backend Services
-     │
-     ▼
-Database
-     │
-     ├──────────────► AI / Data Processing
-     │
-     ▼
-Realtime APIs
-     │
-     ▼
-Web Application
-     │
-     ▼
-     User
-```
+<p align="center">
+  <img src="./assets/my_engineering_direction_github_native_motion.svg" width="100%" alt="AIC2026 retrieval pipeline" />
+</p>
 
 What interests me most is the engineering behind the entire pipeline:
 
@@ -73,25 +50,9 @@ I'm currently looking for **entry-level opportunities** where I can continue bui
 
 # 🧭 My Engineering Direction
 
-```text
-                         COMPUTER ENGINEERING MINDSET
-                                   │
-                ┌──────────────────┼──────────────────┐
-                │                  │                  │
-                ▼                  ▼                  ▼
-             BACKEND               AI            EMBEDDED / IoT
-                │                  │                  │
-          Java / Spring        Python / CV         C++ / ESP32
-          Node / Express       Retrieval           MQTT / Sensors
-          REST / GraphQL       Search / ML         Automation
-          SQL / JPA            PyTorch             Realtime
-          Security             FAISS / CLIP        Hardware ↔ Cloud
-                │                  │                  │
-                └──────────────────┼──────────────────┘
-                                   │
-                                   ▼
-                         END-TO-END SYSTEMS
-```
+<p align="center">
+  <img src="./assets/end_to_end_system_flow_github_native_motion.svg" width="100%" alt="AIC2026 retrieval pipeline" />
+</p>
 
 > **I don't want to understand only one layer of a system.  
 > I want to understand how the layers connect.**
