@@ -1,425 +1,229 @@
-<!-- =========================================================
-                         HERO HEADER
-========================================================== -->
-
 <p align="center">
-  <img
-    src="https://capsule-render.vercel.app/api?type=waving&height=230&section=header&text=NHAT%20NGUYEN&fontSize=52&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Software%20Developer%20%7C%20Backend%20%7C%20Java&descAlignY=61&descSize=19&color=0:0F172A,50:1E1B4B,100:0369A1"
-    width="100%"
-  />
+  <img src="./assets/header.svg" width="100%" alt="Nhat Nguyen — Backend, AI and Embedded/IoT" />
 </p>
 
 <p align="center">
-  <img
-    src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=20&duration=2800&pause=900&color=38BDF8&center=true&vCenter=true&width=850&lines=Software+Engineering+Student;Java+%7C+Spring+Boot+%7C+Backend;Building+Business+Applications;Learning+How+Systems+Actually+Work;Code.+Learn.+Build.+Improve."
-    alt="Typing animation"
-  />
+  <strong>Third-year Information Technology student at HCMUTE</strong><br/>
+  Building end-to-end systems across <b>Backend Engineering</b>, <b>Artificial Intelligence</b>, and <b>Embedded / IoT</b>.
 </p>
 
 <p align="center">
-  <a href="https://github.com/nhatnguyen10a1thd-png">
-    <img src="https://komarev.com/ghpvc/?username=nhatnguyen10a1thd-png&style=for-the-badge&color=0ea5e9&label=PROFILE+VIEWS" />
-  </a>
-  <img src="https://img.shields.io/github/followers/nhatnguyen10a1thd-png?style=for-the-badge&label=FOLLOWERS" />
-  <img src="https://img.shields.io/github/stars/nhatnguyen10a1thd-png?style=for-the-badge&label=STARS" />
+  <a href="#featured-projects">Featured Projects</a> ·
+  <a href="#technology-landscape">Tech Stack</a> ·
+  <a href="#github-activity">GitHub Activity</a>
 </p>
 
 ---
 
-# 👋 Hi, I'm Nhat Nguyen
+## About Me
 
-### Software Developer in Progress
+I am a third-year **Information Technology** student at **Ho Chi Minh City University of Technology and Education (HCMUTE)**, currently exploring both **Software Engineering** and **Artificial Intelligence** as long-term directions.
 
-I'm a Computer Science student focused primarily on **Software Development and Software Engineering**, with a growing interest in **Backend Development, Java, Spring Boot, databases, and system design**.
+What interests me most is not one isolated technology, but how complete systems are designed and connected: APIs, databases, authentication, AI pipelines, realtime communication, embedded devices, and user-facing applications.
 
-I like building applications from the ground up and understanding more than just the code itself:
-
-**requirements → architecture → database → business logic → API → security → testing → maintenance**
-
-For me, software development is not only about making something work.
-
-It's about making it **understandable, reliable, maintainable, and ready to evolve**.
+- Building backend systems with **Java / Spring Boot** and **Node.js / Express**
+- Exploring **Computer Vision, multimodal retrieval, search, ranking, and AI algorithms**
+- Building connected systems with **ESP32, MQTT, sensors, actuators, and realtime communication**
+- Comfortable moving between software architecture, data, AI experimentation, and hardware integration
+- Open to **entry-level Software Engineering opportunities**
 
 ---
 
-## 🧭 My Direction
+## Technology Landscape
+
+<p align="center">
+  <img src="./assets/stack.svg" width="100%" alt="Technology landscape" />
+</p>
+
+### Core Languages
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=java,python,cpp,js,ts,sql&theme=dark" alt="Core languages" />
+</p>
+
+### Frameworks, Platforms & Tools
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=spring,nodejs,express,react,vite,pytorch,opencv,postgres,mysql,docker,git,github,linux,arduino&theme=dark" alt="Frameworks and tools" />
+</p>
+
+---
+
+## Engineering Across Layers
+
+<p align="center">
+  <img src="./assets/architecture.svg" width="100%" alt="System architecture mindset" />
+</p>
+
+I enjoy projects where different areas of computer science meet. My goal is to understand not only how individual components work, but also how they behave together as one reliable system.
+
+---
+
+# Featured Projects
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+### 🌾 SmartFarm IoT & AI
+
+**End-to-end IoT + realtime + AI system**
+
+`ESP32` `MQTT` `Node.js` `Express` `React` `Supabase` `Socket.io` `JWT` `Groq AI`
+
+A smart agriculture platform connecting physical devices to a realtime web application.
+
+**Highlights**
+- Sensor telemetry from ESP32
+- MQTT device communication
+- Realtime Socket.io dashboard
+- Remote actuator control
+- ACK + command timeout mechanism
+- Automatic threshold-based control
+- JWT authentication & roles
+- Safety protection logic
+- Daily AI analysis and recommendations
+
+[Explore SmartFarm →](../Smart-farm-iot)
+
+</td>
+<td width="50%" valign="top">
+
+### 🎥 AIC 2026 — AI Video Retrieval
+
+**Multimodal information retrieval pipeline**
+
+`Python` `PyTorch` `OpenCLIP` `CLIP` `FAISS` `OpenCV`
+
+A video retrieval system that searches large visual collections using natural-language queries.
+
+**Highlights**
+- CLIP text-image embeddings
+- FAISS vector retrieval
+- Multi-prompt search
+- Reciprocal Rank Fusion
+- PRF / Rocchio expansion
+- Maximum Marginal Relevance
+- OCR-assisted retrieval
+- Evaluation-oriented pipeline
+
+[Explore AIC 2026 →](../AIC2026)
+
+</td>
+</tr>
+
+<tr>
+<td width="50%" valign="top">
+
+### ☕ Coffee Shop Management
+
+**Layered Java desktop application**
+
+`Java` `Swing` `JPA` `Hibernate` `MySQL` `MVC`
+
+A business management system focused on real application structure and domain logic.
+
+**Highlights**
+- Authentication & role management
+- POS ordering and invoices
+- Inventory & ingredients
+- Product recipes
+- Suppliers & imports
+- Statistics dashboard
+- DAO / Service / Controller layers
+- Offline/demo fallback
+
+[Explore Coffee Management →](../Coffe-Management)
+
+</td>
+<td width="50%" valign="top">
+
+### 🧠 Squirrels AI Solver
+
+**AI search algorithm laboratory**
+
+`Python` `Pygame` `Search Algorithms` `CSP`
+
+Interactive puzzle solver implementing and visualizing multiple AI strategies.
+
+**Highlights**
+- BFS / DFS / IDS
+- Greedy / A* / IDA*
+- Hill Climbing / Beam / SA
+- AND-OR / LRTA*
+- Backtracking / AC-3 / Min-Conflicts
+- Minimax / Alpha-Beta / Expectimax
+- Search visualization
+- Performance comparison
+
+[Explore AI Solver →](../AI_Project)
+
+</td>
+</tr>
+</table>
+
+---
+
+## Selected Backend Experiments
+
+Beyond the flagship projects, I also use GitHub as a hands-on lab for backend technologies:
+
+`Spring Security` · `JWT` · `GraphQL` · `Spring Boot` · `Thymeleaf` · `Jakarta Servlet` · `JPA` · `REST APIs` · `SQL`
+
+These smaller repositories document how I learn new concepts before applying them to larger systems.
+
+---
+
+## Current Focus
 
 ```text
-                    SOFTWARE ENGINEERING
-                            │
-              ┌─────────────┴─────────────┐
-              │                           │
-         Main Focus                  Additional Interest
-              │                           │
-      Software Development                AI
-              │                    Machine Learning
-       Backend Development              Computer Vision
-              │
-      Java / Spring Boot
-              │
-       Database / REST API
-              │
-       System & Architecture
-```
+Backend Engineering
+├── API design & architecture
+├── Authentication / authorization
+├── Database modeling & persistence
+└── Maintainable service structure
 
-> **Software Engineering is my main path.
-> Artificial Intelligence is a field I explore to expand my technical perspective.**
+Artificial Intelligence
+├── Computer Vision
+├── Multimodal retrieval
+├── Search & ranking
+└── Model evaluation
 
----
-
-# 💻 What I Build
-
-### Backend & Application Development
-
-I enjoy working on systems involving:
-
-`Java` · `Spring Boot` · `REST API` · `JPA/Hibernate`
-
-`Authentication` · `Authorization` · `Transactions`
-
-`Database Design` · `CRUD` · `Search` · `Pagination`
-
-`Business Logic` · `System Architecture`
-
-### Software Engineering
-
-I'm particularly interested in learning how real applications handle:
-
-```text
-Business Rules
-      ↓
-Domain Modeling
-      ↓
-Database Design
-      ↓
-Application Architecture
-      ↓
-API Design
-      ↓
-Security
-      ↓
-Validation
-      ↓
-Transactions
-      ↓
-Testing
-      ↓
-Maintenance
+Embedded / IoT
+├── ESP32 firmware
+├── MQTT communication
+├── Sensors & actuators
+└── Reliable device ↔ cloud workflows
 ```
 
 ---
 
-# 🛠️ Tech Stack
-
-### Programming Languages
-
-<p>
-  <img src="https://skillicons.dev/icons?i=java,python,cpp,javascript,sql" />
-</p>
-
-### Backend & Web
-
-<p>
-  <img src="https://skillicons.dev/icons?i=spring,maven,hibernate,html,css,js" />
-</p>
-
-### Database
-
-<p>
-  <img src="https://skillicons.dev/icons?i=mysql,postgres" />
-</p>
-
-### Tools
-
-<p>
-  <img src="https://skillicons.dev/icons?i=git,github,idea,vscode,docker" />
-</p>
-
----
-
-# 🚀 Featured Projects
-
-## 📚 Book Store
-
-### `Software Development • Backend • Database • Business Logic`
-
-A bookstore application built as a practical software development project.
-
-The goal is not simply to implement CRUD, but to understand how a **business-oriented application** is structured around users, products, transactions and workflows.
-
-### Core concepts
-
-```text
-User
- │
- ├── Authentication
- ├── Browse / Search
- ├── Product Management
- ├── Shopping Cart
- ├── Checkout
- └── Order Management
-```
-
-### What this project represents
-
-* Backend development
-* Database-driven application design
-* Business logic
-* Entity relationships
-* Web application architecture
-* Practical Java development
-
-> **This is one of the projects that represents my main direction: building software applications rather than isolated coding exercises.**
-
----
-
-## 🚚 Logistic UTEExpress
-
-### `Software Engineering • Backend • System Design`
-
-A logistics management system designed around real operational workflows instead of a simple CRUD model.
-
-The project focuses on:
-
-* Order lifecycle
-* Branch management
-* Staff & shipper management
-* Shipment assignment
-* Assignment rejection & reassignment
-* Estimated → final fee processing
-* Role-based access control
-* Real-time notifications
-* Transactional business operations
-
-### Architecture mindset
-
-```text
-Customer
-   │
-   ▼
-Order Creation
-   │
-   ▼
-Order Processing
-   │
-   ▼
-Assignment
-   │
-   ├── Staff Confirmation
-   │
-   ├── Shipper Acceptance
-   │
-   └── Reassignment
-   │
-   ▼
-Delivery
-   │
-   ▼
-Finalization
-```
-
-### Planned / explored technologies
-
-`Spring Boot` · `Spring Security` · `JWT`
-
-`JPA / Hibernate` · `SQL`
-
-`REST API` · `WebSocket`
-
-The purpose of this project is to practice moving from **feature-based coding to business-oriented system design**.
-
----
-
-# 🤖 AI — My Side Track
-
-Software Development is my primary direction, but I also explore Artificial Intelligence because it strengthens my problem-solving and algorithmic thinking.
-
-### AI Project — Squirrels Go Nuts
-
-A search-based AI project exploring multiple approaches to solving a 4×4 puzzle environment.
-
-Topics explored include:
-
-`BFS` · `DFS` · `IDS` · `Greedy`
-
-`A*` · `IDA*` · `Hill Climbing`
-
-`Simulated Annealing` · `CSP`
-
-`AND-OR` · `Belief-State`
-
-`Minimax` · `Alpha-Beta` · `Expectimax`
-
-The project helped me understand not only the algorithms themselves, but also **state modeling, heuristics, complexity, and performance comparison**.
-
----
-
-## 🎥 AIC 2026
-
-An additional project where I explored **AI-based video retrieval**, including concepts around CLIP embeddings, vector search and retrieval pipelines.
-
-This is part of my broader interest in understanding how AI techniques can be integrated into software systems.
-
-> **AI is not my main specialization — it is one of the technical areas I use to broaden my engineering perspective.**
-
----
-
-# 🧠 My Engineering Mindset
-
-I don't want to be the developer who only asks:
-
-> “How do I make this feature work?”
-
-I want to gradually become the developer who also asks:
-
-```text
-Why does it work?
-        ↓
-What happens when it fails?
-        ↓
-What happens when the data is invalid?
-        ↓
-What happens when multiple users act at once?
-        ↓
-Can the architecture evolve?
-        ↓
-Can another developer understand it?
-```
-
-That's why I'm actively improving in:
-
-**Problem Solving · Software Architecture · Database Design · Backend Engineering · Clean Code**
-
----
-
-# 📈 Currently Learning
-
-```text
-Java / OOP
-████████████████████░░
-
-Spring Boot
-██████████████████░░░░
-
-Backend Development
-██████████████████░░░░
-
-Database / JPA
-█████████████████░░░░░
-
-Software Architecture
-███████████████░░░░░░░
-
-System Design
-████████████░░░░░░░░░░
-```
-
-> These represent my current learning priorities, not official skill ratings.
-
----
-
-# 🎯 My 2026 Focus
-
-```yaml
-main:
-  - Software Development
-  - Backend Engineering
-  - Java
-  - Spring Boot
-  - Database Design
-  - Software Architecture
-
-improving:
-  - REST API Design
-  - Authentication & Authorization
-  - Transactions
-  - Testing
-  - System Design
-  - Clean Architecture
-
-exploring:
-  - Artificial Intelligence
-  - Machine Learning
-  - Computer Vision
-```
-
----
-
-# 📊 GitHub Activity
+## GitHub Activity
 
 <p align="center">
-  <img
-    height="180"
-    src="https://github-readme-stats.vercel.app/api?username=nhatnguyen10a1thd-png&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true"
-  />
-  <img
-    height="180"
-    src="https://github-readme-stats.vercel.app/api/top-langs/?username=nhatnguyen10a1thd-png&layout=compact&theme=tokyonight&hide_border=true&langs_count=8"
-  />
+  <img height="165" src="https://github-stats-extended.vercel.app/api?username=nhatnguyen10a1thd-png&show_icons=true&hide_border=true&theme=tokyonight" alt="GitHub stats" />
+  <img height="165" src="https://github-stats-extended.vercel.app/api/top-langs/?username=nhatnguyen10a1thd-png&layout=compact&hide_border=true&theme=tokyonight&langs_count=8" alt="Top languages" />
 </p>
 
 <p align="center">
-  <img
-    src="https://streak-stats.demolab.com?user=nhatnguyen10a1thd-png&theme=tokyonight&hide_border=true"
-  />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/nhatnguyen10a1thd-png/nhatnguyen10a1thd-png/output/github-contribution-grid-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/nhatnguyen10a1thd-png/nhatnguyen10a1thd-png/output/github-contribution-grid-snake.svg" />
+    <img alt="GitHub contribution snake" src="https://raw.githubusercontent.com/nhatnguyen10a1thd-png/nhatnguyen10a1thd-png/output/github-contribution-grid-snake.svg" />
+  </picture>
 </p>
 
 ---
 
-# 🏆 GitHub Trophies
+## The Kind of Engineer I Want to Become
 
-<p align="center">
-  <img
-    src="https://github-profile-trophy.vercel.app/?username=nhatnguyen10a1thd-png&theme=tokyonight&no-frame=true&no-bg=true&margin-w=10&row=1"
-  />
-</p>
+> An engineer who can move from **idea → architecture → implementation → evaluation**, and understand how software, intelligence, and hardware fit together.
 
----
-
-# 📈 Contribution Graph
-
-<p align="center">
-  <img
-    src="https://github-readme-activity-graph.vercel.app/graph?username=nhatnguyen10a1thd-png&bg_color=0f172a&color=94a3b8&line=38bdf8&point=ffffff&area=true&hide_border=true"
-    width="100%"
-  />
-</p>
-
----
-
-# 🤝 Let's Connect
-
-<p align="center">
-
-<a href="https://github.com/nhatnguyen10a1thd-png">
-<img src="https://img.shields.io/badge/GitHub-111827?style=for-the-badge&logo=github&logoColor=white" />
-</a>
-
-<a href="YOUR_LINKEDIN_URL">
-<img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
-</a>
-
-<a href="mailto:YOUR_EMAIL">
-<img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" />
-</a>
-
-</p>
+I am currently looking for **entry-level opportunities** where I can contribute, learn quickly, and work on real engineering problems.
 
 ---
 
 <p align="center">
-
-### `Build.` `Learn.` `Solve.` `Improve.`
-
-<sub>
-Software Engineering is a journey of turning ideas into systems that work.
-</sub>
-
-</p>
-
-<p align="center">
-  <img
-    src="https://capsule-render.vercel.app/api?type=waving&height=120&section=footer&color=0:0369A1,50:1E1B4B,100:0F172A"
-    width="100%"
-  />
+  <b>Backend · AI · Embedded / IoT</b><br/>
+  <sub>Build systems. Solve problems. Keep learning.</sub>
 </p>
