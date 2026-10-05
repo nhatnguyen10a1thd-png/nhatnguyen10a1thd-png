@@ -1,94 +1,97 @@
-<svg width="1200" height="420" viewBox="0 0 1200 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="End-to-end systems flow">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="410" viewBox="0 0 1200 410">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="420">
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="410">
       <stop offset="0%" stop-color="#0b1020"/>
-      <stop offset="100%" stop-color="#101827"/>
+      <stop offset="100%" stop-color="#111827"/>
     </linearGradient>
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="4" result="blur"/>
-      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
-    <style>
-      .title { font: 800 30px 'Segoe UI', Inter, Arial, sans-serif; fill: #e5eef8; }
-      .subtitle { font: 500 14px 'Segoe UI', Inter, Arial, sans-serif; fill: #93a4b8; }
-      .node-title { font: 800 18px 'Segoe UI', Inter, Arial, sans-serif; }
-      .node-sub { font: 600 12px 'Segoe UI', Inter, Arial, sans-serif; fill: #d1d5db; }
-      .cap { font: 700 12px 'Segoe UI', Inter, Arial, sans-serif; fill: #dbeafe; }
-      .small { font: 700 11px 'Segoe UI', Inter, Arial, sans-serif; fill: #a5b4c7; }
-      .line { stroke: #38bdf8; stroke-width: 3.2; fill: none; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 8 9; }
-      .line2 { stroke: #a78bfa; stroke-width: 3.2; fill: none; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 8 9; }
-    </style>
+    <linearGradient id="accent1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#6366f1"/>
+    </linearGradient>
+    <linearGradient id="accent2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#a78bfa"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+    <linearGradient id="accent3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4ade80"/>
+      <stop offset="100%" stop-color="#16a34a"/>
+    </linearGradient>
   </defs>
 
-  <rect width="1200" height="420" rx="28" fill="url(#bg)"/>
-  <text x="46" y="50" class="title">🧠 How I Think About End-to-End Systems</text>
-  <text x="46" y="75" class="subtitle">From the physical world to software, data, intelligence, realtime APIs, and user-facing applications</text>
+  <rect width="1200" height="410" rx="28" fill="url(#bg)"/>
+  <text x="48" y="48" fill="#f8fafc" font-family="Segoe UI,Arial,sans-serif" font-size="30" font-weight="700">How I Think About End-to-End Systems</text>
+  <text x="48" y="74" fill="#94a3b8" font-family="Segoe UI,Arial,sans-serif" font-size="14">
+    From physical signals to software, data, intelligence, realtime APIs, and user-facing applications
+  </text>
 
-  <g filter="url(#glow)">
-    <rect x="66" y="154" width="140" height="84" rx="20" fill="#23183a" stroke="#a78bfa" stroke-width="2.2"/>
-    <text x="136" y="187" text-anchor="middle" class="node-title" fill="#e8dbff">🌍 Physical World</text>
-    <text x="136" y="209" text-anchor="middle" class="node-sub">Real-world events</text>
+  <!-- Physical world -->
+  <rect x="50" y="145" width="145" height="86" rx="18" fill="#1f1634" stroke="#a78bfa" stroke-width="2"/>
+  <circle cx="78" cy="173" r="12" fill="url(#accent2)"/>
+  <text x="98" y="178" fill="#ede9fe" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="700">Physical World</text>
+  <text x="72" y="207" fill="#c4b5fd" font-family="Segoe UI,Arial,sans-serif" font-size="12">Real-world events</text>
 
-    <rect x="248" y="154" width="160" height="84" rx="20" fill="#25163a" stroke="#c084fc" stroke-width="2.2"/>
-    <text x="328" y="187" text-anchor="middle" class="node-title" fill="#eddcff">🌱 Sensors / ESP32</text>
-    <text x="328" y="209" text-anchor="middle" class="node-sub">Capture data</text>
+  <!-- Sensors -->
+  <rect x="235" y="145" width="155" height="86" rx="18" fill="#22153a" stroke="#c084fc" stroke-width="2"/>
+  <circle cx="263" cy="173" r="12" fill="url(#accent2)"/>
+  <text x="283" y="178" fill="#f3e8ff" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="700">Sensors / ESP32</text>
+  <text x="257" y="207" fill="#d8b4fe" font-family="Segoe UI,Arial,sans-serif" font-size="12">Capture telemetry</text>
 
-    <rect x="448" y="154" width="150" height="84" rx="20" fill="#0e2338" stroke="#38bdf8" stroke-width="2.2"/>
-    <text x="523" y="187" text-anchor="middle" class="node-title" fill="#d7f0ff">📡 MQTT / HTTP</text>
-    <text x="523" y="209" text-anchor="middle" class="node-sub">Transport & messaging</text>
+  <!-- Messaging -->
+  <rect x="430" y="145" width="145" height="86" rx="18" fill="#0d2238" stroke="#38bdf8" stroke-width="2"/>
+  <circle cx="458" cy="173" r="12" fill="url(#accent1)"/>
+  <text x="478" y="178" fill="#e0f2fe" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="700">MQTT / HTTP</text>
+  <text x="452" y="207" fill="#bae6fd" font-family="Segoe UI,Arial,sans-serif" font-size="12">Messaging layer</text>
 
-    <rect x="642" y="154" width="175" height="84" rx="20" fill="#0b2b1e" stroke="#4ade80" stroke-width="2.2"/>
-    <text x="729.5" y="187" text-anchor="middle" class="node-title" fill="#caf7db">⚙️ Backend Services</text>
-    <text x="729.5" y="209" text-anchor="middle" class="node-sub">Logic · Validation · Auth</text>
+  <!-- Backend -->
+  <rect x="615" y="135" width="175" height="106" rx="20" fill="#0b2b1e" stroke="#4ade80" stroke-width="2"/>
+  <circle cx="645" cy="166" r="12" fill="url(#accent3)"/>
+  <text x="667" y="172" fill="#dcfce7" font-family="Segoe UI,Arial,sans-serif" font-size="18" font-weight="700">Backend Services</text>
+  <text x="639" y="200" fill="#bbf7d0" font-family="Segoe UI,Arial,sans-serif" font-size="12">Logic - Validation - Auth</text>
+  <text x="639" y="219" fill="#bbf7d0" font-family="Segoe UI,Arial,sans-serif" font-size="12">APIs - Business Rules</text>
 
-    <rect x="860" y="154" width="145" height="84" rx="20" fill="#15243d" stroke="#60a5fa" stroke-width="2.2"/>
-    <text x="932.5" y="187" text-anchor="middle" class="node-title" fill="#deebff">🗄️ Database</text>
-    <text x="932.5" y="209" text-anchor="middle" class="node-sub">Persist data</text>
+  <!-- Database -->
+  <rect x="835" y="145" width="135" height="86" rx="18" fill="#15243d" stroke="#60a5fa" stroke-width="2"/>
+  <circle cx="863" cy="173" r="12" fill="url(#accent1)"/>
+  <text x="883" y="178" fill="#dbeafe" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="700">Database</text>
+  <text x="857" y="207" fill="#bfdbfe" font-family="Segoe UI,Arial,sans-serif" font-size="12">Persist state</text>
 
-    <rect x="860" y="286" width="178" height="84" rx="20" fill="#25163a" stroke="#c084fc" stroke-width="2.2"/>
-    <text x="949" y="319" text-anchor="middle" class="node-title" fill="#eddcff">🧠 AI / Data Processing</text>
-    <text x="949" y="341" text-anchor="middle" class="node-sub">Analytics · Insights</text>
+  <!-- Realtime -->
+  <rect x="1010" y="145" width="140" height="86" rx="18" fill="#082f49" stroke="#22d3ee" stroke-width="2"/>
+  <circle cx="1038" cy="173" r="12" fill="#22d3ee"/>
+  <text x="1058" y="178" fill="#cffafe" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="700">Realtime APIs</text>
+  <text x="1032" y="207" fill="#a5f3fc" font-family="Segoe UI,Arial,sans-serif" font-size="12">Live updates</text>
 
-    <rect x="1046" y="154" width="120" height="84" rx="20" fill="#082f49" stroke="#22d3ee" stroke-width="2.2"/>
-    <text x="1106" y="187" text-anchor="middle" class="node-title" fill="#dafaff">🔄 Realtime APIs</text>
-    <text x="1106" y="209" text-anchor="middle" class="node-sub">Live updates</text>
+  <!-- AI -->
+  <rect x="820" y="287" width="170" height="82" rx="18" fill="#23153a" stroke="#c084fc" stroke-width="2"/>
+  <circle cx="848" cy="315" r="12" fill="url(#accent2)"/>
+  <text x="868" y="320" fill="#f3e8ff" font-family="Segoe UI,Arial,sans-serif" font-size="16" font-weight="700">AI / Data Processing</text>
+  <text x="842" y="347" fill="#d8b4fe" font-family="Segoe UI,Arial,sans-serif" font-size="12">Analysis - Search - Insights</text>
 
-    <rect x="1046" y="286" width="120" height="84" rx="20" fill="#0c4a6e" stroke="#38bdf8" stroke-width="2.2"/>
-    <text x="1106" y="319" text-anchor="middle" class="node-title" fill="#d7f9ff">🖥️ Web App</text>
-    <text x="1106" y="341" text-anchor="middle" class="node-sub">Dashboard / UI</text>
-  </g>
+  <!-- Web app -->
+  <rect x="1010" y="287" width="140" height="82" rx="18" fill="#0c4a6e" stroke="#38bdf8" stroke-width="2"/>
+  <circle cx="1038" cy="315" r="12" fill="url(#accent1)"/>
+  <text x="1058" y="320" fill="#e0f2fe" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="700">Web App</text>
+  <text x="1032" y="347" fill="#bae6fd" font-family="Segoe UI,Arial,sans-serif" font-size="12">User experience</text>
 
-  <path d="M206 196 H248" class="line2"/>
-  <path d="M408 196 H448" class="line2"/>
-  <path d="M598 196 H642" class="line"/>
-  <path d="M817 196 H860" class="line"/>
-  <path d="M1005 196 H1046" class="line"/>
-  <path d="M1106 238 V286" class="line"/>
-  <path d="M932.5 238 V272" class="line2"/>
-  <path d="M1005 196 C1028 196,1036 196,1046 196" class="line"/>
+  <!-- Connections -->
+  <path d="M195 188 H235" stroke="#a78bfa" stroke-width="3" fill="none"/>
+  <path d="M390 188 H430" stroke="#a78bfa" stroke-width="3" fill="none"/>
+  <path d="M575 188 H615" stroke="#38bdf8" stroke-width="3" fill="none"/>
+  <path d="M790 188 H835" stroke="#4ade80" stroke-width="3" fill="none"/>
+  <path d="M970 188 H1010" stroke="#38bdf8" stroke-width="3" fill="none"/>
+  <path d="M1080 231 V287" stroke="#38bdf8" stroke-width="3" fill="none"/>
+  <path d="M902 231 V287" stroke="#a78bfa" stroke-width="3" fill="none"/>
 
-  <path d="M932.5 238 V262 H949 V286" class="line2"/>
+  <!-- Arrow heads -->
+  <polygon points="235,188 224,182 224,194" fill="#a78bfa"/>
+  <polygon points="430,188 419,182 419,194" fill="#a78bfa"/>
+  <polygon points="615,188 604,182 604,194" fill="#38bdf8"/>
+  <polygon points="835,188 824,182 824,194" fill="#4ade80"/>
+  <polygon points="1010,188 999,182 999,194" fill="#38bdf8"/>
+  <polygon points="1080,287 1074,276 1086,276" fill="#38bdf8"/>
+  <polygon points="902,287 896,276 908,276" fill="#a78bfa"/>
 
-  <rect x="709" y="102" width="110" height="28" rx="14" fill="#10283d" stroke="#38bdf8"/>
-  <text x="764" y="120" text-anchor="middle" class="cap">Core Logic</text>
-
-  <rect x="893" y="102" width="78" height="28" rx="14" fill="#1d1f3a" stroke="#a78bfa"/>
-  <text x="932" y="120" text-anchor="middle" class="cap">Data</text>
-
-  <circle r="6" fill="#a78bfa" filter="url(#glow)">
-    <animateMotion dur="4.2s" repeatCount="indefinite" path="M206 196 H248 H448 H642"/>
-    <animate attributeName="opacity" values="0;1;1;0" dur="4.2s" repeatCount="indefinite"/>
-  </circle>
-
-  <circle r="6" fill="#38bdf8" filter="url(#glow)">
-    <animateMotion dur="4.8s" begin=".6s" repeatCount="indefinite" path="M642 196 H860 H1046 V286"/>
-    <animate attributeName="opacity" values="0;1;1;1;0" dur="4.8s" repeatCount="indefinite"/>
-  </circle>
-
-  <circle r="6" fill="#c084fc" filter="url(#glow)">
-    <animateMotion dur="3.6s" begin="1.2s" repeatCount="indefinite" path="M932.5 238 V262 H949 V286"/>
-    <animate attributeName="opacity" values="0;1;1;0" dur="3.6s" repeatCount="indefinite"/>
-  </circle>
-
-  <text x="48" y="394" class="small">Recommended use: replace the plain ASCII "Physical World → User" diagram in your GitHub profile README.</text>
+  <text x="48" y="391" fill="#64748b" font-family="Segoe UI,Arial,sans-serif" font-size="11">
+    Device - Messaging - Backend - Data - Intelligence - Realtime - User Experience
+  </text>
 </svg>
